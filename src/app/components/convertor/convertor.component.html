@@ -1,0 +1,25 @@
+<div class="convertor-wrapper">
+  <div class="convertor_container">
+    <div class="convertor_body">
+        <div class="convertor_select-body">
+          <div class="convertor-exchange">
+            <input #fromCurrAmount [value]="fromAmount" type="number" min="1" (change)="handleFromChangeAmount(fromCurrAmount.value)">
+            <select #fromCurr class="convertor_select" (change)="selectFromOption(fromCurr.value)">
+              <option *ngFor="let option of optionsArray">{{option}}</option>
+            </select>
+          </div>
+          <p>=</p>
+          <div class="convertor-exchange">
+            <input #toCurrAmount [value]="toAmount" type="number" min="1" (change)="handleToChangeAmount(toCurrAmount.value)">
+            <select #toCurr class="convertor_select" (change)="selectToOption(toCurr.value)">
+              <option *ngFor="let option of optionsArray" [selected]="option === 'USD'">{{option}}</option>
+            </select>
+          </div>
+        </div>
+      <div class="btn-container">
+        <button (click)="convertValue()">Convert</button>
+      </div>
+
+    </div>
+  </div>
+</div>

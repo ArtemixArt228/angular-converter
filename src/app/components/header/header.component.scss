@@ -1,0 +1,33 @@
+.header {
+  background: #000000;
+}
+
+.header_body {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_main {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.header_curr {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 767.98px){
+  .header_title {
+    font-size: 12px;
+    text-align: center;
+  }
+  .header_body {
+    flex-direction: column;
+    height: 100px;
+  }
+}
